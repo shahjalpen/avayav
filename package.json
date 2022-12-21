@@ -1,57 +1,61 @@
 {
-  "name": "@jalpenshah/components",
-  "description": "Component library for jalpenshah",
+  "name": "jalpenshah-avayav",
+  "version": "0.0.2",
+  "description": "Component library for jalpenshah.com",
   "author": "Jalpen Shah",
   "keywords": [
     "jalpenshah.com",
     "components",
     "ui"
   ],
-  "version": "0.0.2",
-  "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "build/index.js",
+  "module": "build/index.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "README.md"
+    "build"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "@babel/polyfill": "^7.12.1"
-  },
+  "types": "build/index.d.ts",
   "scripts": {
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
-    "eject": "react-scripts eject"
+    "build": "rollup -c",
+    "build:storybook": "build-storybook",
+    "test": "jest",
+    "storybook": "start-storybook -p 6006",
+    "create": "node ./script/create-component"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.14",
-    "@babel/preset-env": "^7.13.12"
+    "@babel/core": "^7.15.0",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "^6.5.13",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@types/jest": "^29.2.4",
+    "@types/react": "^16.14.14",
+    "@types/react-dom": "^16.9.14",
+    "autoprefixer": "^9.0.0",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "postcss": "^8.4.20",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.8.4"
   }
 }
