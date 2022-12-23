@@ -1,6 +1,6 @@
 {
-  "name": "jalpenshah-avayav",
-  "version": "0.0.2",
+  "name": "@jalpenshah/avayav",
+  "version": "0.0.5",
   "description": "Component library for jalpenshah.com",
   "author": "Jalpen Shah",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "main": "build/index.js",
   "module": "build/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "typings": "build/index.d.ts",
   "files": [
     "build"
   ],
