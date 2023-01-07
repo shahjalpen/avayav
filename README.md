@@ -10,3 +10,6 @@ To install,
 ### npm install @jalpenshah/avayav
 or 
 ### yarn add @jalpenshah/avayav
+
+
+Used rollup for building the package
